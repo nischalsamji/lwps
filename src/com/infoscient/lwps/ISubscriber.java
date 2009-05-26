@@ -1,0 +1,27 @@
+package com.infoscient.lwps;
+
+import java.util.Properties;
+
+public interface ISubscriber {
+	public void connect(String host, String code, Properties props)
+			throws Exception;
+
+	public void connect(String host, int port, String code, Properties props)
+			throws Exception;
+
+	public Thread getReadThread();
+
+	public String getHost();
+
+	public int getPort();
+
+	public String getCode();
+
+	public Properties getProps();
+
+	public void setup(Properties setupProps);
+
+	public void newPublisher(int pubID, Properties pubProps);
+
+	public void receiveMessage(int pubID, String msg);
+}

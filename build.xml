@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="lwps">
+	<!-- Properties -->
+	<property name="out.home" location="out" />
+	<property file="build.properties" />
+	<property name="jar.file" value="lwps.jar" />
+	<property environment="env" />
+
+	<target name="dist">
+		<jar destfile="${out.home}/${jar.file}">
+			<fileset dir="bin" />
+		</jar>
+	</target>
+</project>
